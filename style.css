@@ -1,0 +1,1018 @@
+/*
+Color list
+
+White: #f1e6d0
+Black: #121212
+Dark Black: #0a0a0c
+Brown: #937341
+Light Brown: #d1ae75
+Dark Gray: #111318
+
+Font list
+font-family: 'Slabo 27px', serif;
+font-family: 'Raleway', sans-serif;
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500|Slabo+27px&display=swap&subset=latin-ext");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: /* dark black */ #0a0a0c;
+  overflow-x: hidden;
+}
+
+.space {
+  position: relative;
+  width: 0;
+  /* equal br */
+  height: 2em;
+}
+
+a,
+p {
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  color: /* brown */ #937341;
+  text-decoration: none;
+  line-height: 120%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: 150%;
+}
+
+.drop--cap::first-letter {
+  font-size: 4.5em;
+  float: left;
+  margin: 0.15em 0.15em 0 0;
+  padding: 0 0.15em;
+  font-family: "Slabo 27px", serif;
+  border-bottom: 3px solid #d1ae75;
+}
+
+.small {
+  font-size: 0.9em;
+}
+
+.heading {
+  font-size: 3em;
+  font-family: "Slabo 27px", serif;
+  letter-spacing: 4px;
+  color: /* brown */ #937341;
+}
+
+.heading--small {
+  font-size: 2em;
+}
+
+.heading--white {
+  color: /* white */ #f1e6d0;
+}
+
+.heading--big {
+  font-size: 6em;
+  letter-spacing: 12px;
+}
+
+.heading--gradient {
+  background: rgba(0, 0, 0, 0) -webkit-linear-gradient(
+      bottom,
+      rgb(103, 71, 31),
+      rgb(203, 172, 98)
+    ) repeat scroll 0% 0% padding-box text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading--popup--shadow {
+  text-shadow: 3px 5px 12px #937341;
+}
+
+.sub--heading {
+  color: /* white */ #f1e6d0;
+  letter-spacing: 4px;
+}
+
+.underline {
+  text-decoration: none;
+  position: relative;
+}
+
+.underline::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  /* move underline up or down */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  width: 0%;
+  background: /* light brown */ #d1ae75;
+  -webkit-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
+.btn {
+  -o-border-image: -o-linear-gradient(top, #c3a758, #6b521e) stretch;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#c3a758), to(#6b521e)) stretch;
+     border-image: linear-gradient(180deg, #c3a758, #6b521e) stretch;
+  border-style: solid;
+  border-image-slice: 1;
+  background: rgba(25, 28, 33, 0.8);
+  color: #d1ae75;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 23px 48px;
+  -webkit-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn:hover {
+  -webkit-box-shadow: inset 0 0 10px #c3a758, 0 0 10px #6b521e;
+          box-shadow: inset 0 0 10px #c3a758, 0 0 10px #6b521e;
+}
+
+.btn .btn--arrow--container {
+  width: 18px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.btn .btn--arrow {
+  position: absolute;
+  -webkit-transition: all 700ms 350ms ease-in-out;
+  -o-transition: all 700ms 350ms ease-in-out;
+  transition: all 700ms 350ms ease-in-out;
+}
+
+.btn .btn--arrow--right {
+  left: 0.5em;
+  opacity: 1;
+}
+
+.btn:hover .btn--arrow--right {
+  left: 3em;
+  opacity: 0;
+}
+
+.btn .btn--arrow--right--hover {
+  opacity: 0;
+  left: -2em;
+  color: #f1e6d0;
+}
+
+.btn:hover .btn--arrow--right--hover {
+  left: 0.5em;
+  opacity: 1;
+}
+
+.myNav {
+  background: #121212;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  z-index: 2000;
+}
+
+.champion--name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 40%;
+  padding-left: 5%;
+}
+
+.menu--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.menu--link {
+  list-style: none;
+}
+
+.menu--link a {
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.menu--link a:hover {
+  color: /* light brown */ #d1ae75;
+}
+
+.active--menu--link {
+  color: /* white */ #f1e6d0;
+  opacity: 1;
+}
+
+.myHeader {
+  position: relative;
+  top: 10vh;
+  min-height: 88vh;
+  overflow: hidden;
+}
+
+.myHeader .title {
+  background-image: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    color-stop(65%, rgba(0, 0, 0, 0)),
+    color-stop(70%, rgba(10, 10, 12, 0.1)),
+    color-stop(90%, #0a0a0c)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(10, 10, 12, 0.1) 70%,
+    #0a0a0c 90%
+  );
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(10, 10, 12, 0.1) 70%,
+    #0a0a0c 90%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 35px;
+  padding-top: 88vh;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.myHeader .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 184px;
+  height: 184px;
+}
+
+.myHeader .title .header--border {
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+}
+
+.myHeader .title h2 {
+  text-transform: uppercase;
+}
+
+.myHeader .title .sub--heading {
+  margin-top: 1em;
+}
+
+.content {
+  margin-top: 150px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .slideshow {
+  position: relative;
+  width: 88vw;
+  height: 88vh;
+  background: url("skin/Draven_0.jpg") center / 100% 100% no-repeat;
+  margin-bottom: 10vh;
+}
+
+.content .slideshow .next--button,
+.content .slideshow .back--button {
+  position: absolute;
+  top: 50%;
+  /* right: 0; */
+  color: #f1e6d0;
+  /* margin-right: 0.5em; */
+  font-size: 2em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0.5em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.content .slideshow .next--button:hover,
+.content .slideshow .back--button:hover {
+  background: rgba(10, 10, 12, 0.3);
+}
+
+.content .slideshow .next--button {
+  right: 0;
+  margin-right: 0.5em;
+}
+
+.content .slideshow .back--button {
+  left: 0;
+  margin-left: 0.5em;
+}
+
+.content .slideshow .img--count {
+  position: absolute;
+  bottom: 0.5em;
+  width: auto;
+  height: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .slideshow .img--count .img--count--button {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f1e6d0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.content .slideshow--2 {
+  position: relative;
+  width: 88vw;
+  height: 88vh;
+  background: url("img/draven_concept_art.jpg") center / 100% 100% no-repeat;
+  margin-bottom: 10vh;
+}
+
+.content .slideshow--2 .next--button--2,
+.content .slideshow--2 .back--button--2 {
+  position: absolute;
+  top: 50%;
+  /* right: 0; */
+  color: #937341;
+  /* margin-right: 0.5em; */
+  font-size: 2em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0.5em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.content .slideshow--2 .next--button--2:hover,
+.content .slideshow--2 .back--button--2:hover {
+  background: rgba(10, 10, 12, 0.3);
+}
+
+.content .slideshow--2 .next--button--2 {
+  right: 0;
+  margin-right: 0.5em;
+}
+
+.content .slideshow--2 .back--button--2 {
+  left: 0;
+  margin-left: 0.5em;
+}
+
+.content .slideshow--2 .img--count--2 {
+  position: absolute;
+  bottom: 0.5em;
+  width: auto;
+  height: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .slideshow--2 .img--count--2 .img--count--button--2 {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #937341;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.content .story {
+  width: 50vw;
+}
+
+.content .story p {
+  margin-bottom: 2em;
+  color: #f1e6d0;
+}
+
+.content .champion--logo {
+  position: relative;
+  top: 0;
+  width: 122px;
+  height: 122px;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: #111318;
+}
+
+.content .champion--logo .logo {
+  background-image: url("img/logo.jpg");
+  background-position: 84.3621% 13.947%;
+  background-size: 350% auto;
+  opacity: 1;
+  position: absolute;
+  top: 20.74px;
+  width: 80.52px;
+  height: 80.52px;
+  left: 20.74px;
+  border: 1px solid /* gold */ #ded2b3;
+  border-radius: 50%;
+}
+
+.content .champion--logo img {
+  position: absolute;
+  top: 0;
+}
+
+.content .quote {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  border: 1px solid #31271e;
+  -webkit-transform: translateY(-61px);
+      -ms-transform: translateY(-61px);
+          transform: translateY(-61px);
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #111318;
+}
+
+.content .quote .heading,
+.content .quote .sub--heading {
+  margin: 1.5em 0;
+}
+
+.content .content--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+}
+
+.content .content--list .content--element {
+  width: 100%;
+  height: 500px;
+  /* background: #111318; */
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.content .content--list .content--element .picture,
+.content .content--list .content--element .link {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+/* .content .content--list .content--element .picture {
+  background: green;
+}
+
+.content .content--list .content--element .link {
+  background: blue;
+} */
+
+.content .content--list .content--element:nth-child(odd) .picture,
+.content .content--list .content--element:nth-child(even) .link {
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  left: 0;
+}
+
+.content .content--list .content--element:nth-child(even) .picture,
+.content .content--list .content--element:nth-child(odd) .link {
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  right: 0;
+}
+
+.content .content--list .content--element .picture {
+  -webkit-filter: sepia(50%);
+          filter: sepia(50%);
+}
+
+.content .content--list .content--element .link .background--link {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.content .content--list .content--element .link .link--content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content .content--list .content--element .link .link--content img {
+  width: 184px;
+  height: 184px;
+}
+
+.content .content--list .content--element .link .link--content p {
+  width: 70%;
+  text-align: center;
+}
+
+.content #home .content--element:nth-child(1) .picture,
+.content #home .content--element:nth-child(1) .link .background--link {
+  background: url("img/logo.jpg");
+  background-position: 84.3621% 13.947%;
+}
+
+.content #home .content--element:nth-child(2) .picture,
+.content #home .content--element:nth-child(2) .link .background--link {
+  background: url("img/stat.jpg");
+  background-position: 50% 50%;
+  background-size: auto 150%;
+}
+
+.content #home .content--element:nth-child(3) .picture,
+.content #home .content--element:nth-child(3) .link .background--link {
+  background: url("img/art.jpg");
+  background-position: 45% 50%;
+  background-size: auto 100%;
+}
+
+.content #draven .content--element:nth-child(1) .picture,
+.content #draven .content--element:nth-child(1) .link .background--link {
+  background: url("img/logo.jpg");
+  background-position: 84.3621% 13.947%;
+}
+
+.content #draven .content--element:nth-child(2) .picture,
+.content #draven .content--element:nth-child(2) .link .background--link {
+  background: url("img/noxus.jpg");
+  background-position: 50% 50%;
+  background-size: auto 100%;
+}
+
+.content #draven .content--element:nth-child(3) .picture,
+.content #draven .content--element:nth-child(3) .link .background--link {
+  background: url("img/draven_short_story.jpg");
+  background-position: 45% 50%;
+  background-size: auto 100%;
+}
+
+.content #art .content--element:nth-child(1) .picture,
+.content #art .content--element:nth-child(1) .link .background--link {
+  background: url("img/draven_concept_art.jpg");
+  background-position: 84.3621% 13.947%;
+}
+
+.content #art .content--element:nth-child(2) .picture,
+.content #art .content--element:nth-child(2) .link .background--link {
+  background: url("img/video_draven.jpg");
+  background-position: 60% 10%;
+}
+
+.content #art .content--element:nth-child(3) .picture,
+.content #art .content--element:nth-child(3) .link .background--link {
+  background: url("img/draven_art_spotlight.png");
+  background-size: 100% 88%;
+  background-position: 46.0119% 29.2751%;
+}
+
+.content .abilities--and--stats {
+  position: relative;
+  width: 88vw;
+  height: 60vh;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #111318;
+  border: 2px solid #937341;
+}
+
+.content .abilities--and--stats .stats {
+  width: 50%;
+  height: 100%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .abilities--and--stats .stats .champion--icon {
+  width: 100%;
+  height: 30%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 2px solid #937341;
+}
+
+.content .abilities--and--stats .stats .champion--icon .icon {
+  width: 30%;
+  height: 100%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .abilities--and--stats .stats .champion--icon .name {
+  width: 70%;
+  height: 100%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .abilities--and--stats .stats .stat {
+  width: 100%;
+  height: 70%;
+
+  border: 2px solid #937341;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.content .abilities--and--stats .stats .stat .stat--1,
+.content .abilities--and--stats .stats .stat .stat--2 {
+  width: 50%;
+  height: 100%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content .abilities--and--stats .stats .stat p {
+  line-height: 150%;
+  color: #f1e6d0;
+  margin-left: 20px;
+}
+
+.stat-label {
+  display: block;
+  padding-left: 30px;
+}
+
+.stat-hp {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -150px;
+}
+
+.stat-ad {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 0;
+}
+
+.stat-as {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -50px;
+}
+
+.stat-ms {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -75px;
+}
+
+.stat-hp-regen {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -175px;
+}
+
+.stat-armor {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -25px;
+}
+
+.stat-mr {
+  background: url("img/stat-icons-sprite.png") no-repeat 0 -125px;
+}
+
+.stat--info {
+  padding-left: 30px;
+}
+
+.content .abilities--and--stats .abilities {
+  width: 50%;
+  height: 100%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #937341;
+}
+
+.content .abilities--and--stats .abilities .intro--vid {
+  width: 100%;
+  height: 70%;
+}
+
+.content .abilities--and--stats .abilities .abilities--container {
+  width: 100%;
+  height: 30%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .abilities--and--stats .abilities .abilities--container a {
+  width: 64px;
+  height: 64px;
+}
+
+.passive {
+  background: url("img/Draven_passive.png");
+  border: 2px solid #937341;
+}
+
+.skill_1 {
+  background: url("img/DravenSpinning.png");
+  border: 2px solid #937341;
+}
+
+.skill_2 {
+  background: url("img/DravenFury.png");
+  border: 2px solid #937341;
+}
+
+.skill_3 {
+  background: url("img/DravenDoubleShot.png");
+  border: 2px solid #937341;
+}
+
+.skill_4 {
+  background: url("img/DravenRCast.png");
+  border: 2px solid #937341;
+}
+
+.content .skill--des {
+  width: 100%;
+  height: 700px;
+  /* background: #111318; */
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.content .skill--des .icon,
+.content .skill--des .des {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #111318;
+}
+
+.content .skill--des .icon {
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  left: 0;
+}
+
+.content .skill--des .icon .icon--content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content .skill--des .icon img {
+  width: 75px;
+  height: 75px;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  border: 2px solid #937341;
+}
+
+.content .skill--des .icon .icon--content p {
+  text-align: center;
+  width: 70%;
+}
+
+.content .skill--des .des {
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  right: 0;
+}
+
+.content .skill--des .des .des--content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content .skill--des .des .des--content p {
+  text-align: center;
+  width: 70%;
+}
